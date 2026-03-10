@@ -1,9 +1,72 @@
-body{
+/* Fondo verde azulado rústico tipo batik */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: repeating-radial-gradient(circle at 0 0, #3b6b68, #3b6b68 10px, #5e9a97 10px, #5e9a97 20px);
+  color: #3a4a48;
+  scroll-behavior: smooth;
+}
 
-margin:0;
-background:#f5efe6;
-font-family:'Montserrat',sans-serif;
+/* Sobre grande */
+.envelope-large {
+  width: 300px;       /* más grande */
+  height: 200px;      /* más alto */
+  position: relative;
+  cursor: pointer;
+  margin: 50px 0;
+}
 
+/* Cuerpo del sobre */
+.envelope-body {
+  background: #e7dbc9;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Solapa superior del sobre */
+.envelope-top {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid #d6c8b2;
+  position: absolute;
+  top: -100px;
+  border-radius: 2px;
+}
+
+/* Corazón en el centro */
+.heart {
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+/* Mensaje "toca el corazón" */
+.touch {
+  font-size: 18px;
+  color: #f2eadf;
+  margin-top: 20px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+
+/* Animación de apertura del sobre */
+.opening {
+  animation: openEnvelopeAnim 1s forwards;
+}
+
+@keyframes openEnvelopeAnim {
+  0% { transform: translateY(0) rotateX(0deg); }
+  50% { transform: translateY(-50px) rotateX(45deg); }
+  100% { transform: translateY(-100vh) rotateX(90deg); opacity:0; }
 }
 
 section{
@@ -179,3 +242,4 @@ font-size:36px;
 font-weight:bold;
 
 }
+
