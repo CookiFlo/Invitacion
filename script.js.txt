@@ -1,0 +1,71 @@
+function openEnvelope(){
+
+document.getElementById("intro").style.display="none"
+
+document.getElementById("invitation").classList.remove("hidden")
+
+}
+
+const weddingDate = new Date("2027-01-15")
+
+function updateCountdown(){
+
+const today = new Date()
+
+const diff = weddingDate - today
+
+const days = Math.floor(diff/(1000*60*60*24))
+
+document.getElementById("countdown").innerHTML = days + " días"
+
+}
+
+setInterval(updateCountdown,1000)
+
+function showGift(){
+
+document.getElementById("gift").classList.toggle("hidden")
+
+}
+
+function sendSong(){
+
+let song=document.getElementById("song").value
+
+let msg="Canción sugerida: "+song
+
+window.open(
+"https://instagram.com/direct/t/tu_usuario?text="+msg
+)
+
+}
+
+function confirm(){
+
+let name=document.getElementById("name").value
+let guests=document.getElementById("guests").value
+let extra=document.getElementById("extra").value
+
+let msg=
+"Confirmo asistencia%0A"+
+"Nombre:"+name+"%0A"+
+"Acompañantes:"+guests+"%0A"+
+"Info:"+extra
+
+window.open(
+"https://instagram.com/direct/t/tu_usuario?text="+msg
+)
+
+}
+
+function decline(){
+
+let name=document.getElementById("name").value
+
+let msg="No puedo asistir - "+name
+
+window.open(
+"https://instagram.com/direct/t/tu_usuario?text="+msg
+)
+
+}
