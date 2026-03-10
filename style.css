@@ -21,18 +21,6 @@ align-items:center;
 
 }
 
-/* filtro verde azulado */
-
-.overlay{
-
-position:absolute;
-width:100%;
-height:100%;
-
-background:rgba(25,85,80,0.6);
-
-}
-
 /* contenedor sobre */
 
 .envelope-container{
@@ -65,7 +53,7 @@ transform:translate(-50%,-50%);
 
 font-size:40px;
 
-color:#b30000;
+color: brown
 
 cursor:pointer;
 
@@ -153,5 +141,6 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
