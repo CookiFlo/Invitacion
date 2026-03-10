@@ -10,183 +10,56 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- SOBRE CERRADO -->
-<section id="intro" class="intro-section">
-  <div class="envelope-large">
-    <div class="envelope-top"></div>
-    <div class="envelope-body">
-      <!-- Corazón al centro -->
-      <div class="heart" onclick="openEnvelope()">❤️</div>
-    </div>
-  </div>
-  <p class="touch">Toca el corazón</p>
+<!-- PANTALLA INICIAL -->
+
+<section id="intro">
+
+<div class="overlay"></div>
+
+<div class="envelope-container">
+
+<div class="envelope" onclick="abrirSobre()">
+
+<div class="flap"></div>
+
+<div class="letter"></div>
+
+</div>
+
+<p class="touch">Toca el sobre</p>
+
+</div>
 
 </section>
 
 
-<!-- INVITACION -->
 
-<div id="invitation" class="hidden">
+<!-- PRIMER HOJA -->
 
-<section class="paper">
+<section id="hoja1" class="hidden">
+
+<div class="paper">
 
 <h1>Aldana & Angel</h1>
 
 <h2>Nuestra Boda</h2>
 
-<p class="date">15 Enero 2027</p>
-
-<div class="arrow">↑</div>
-
-</section>
-
-
-<section class="paper">
-
-<h2>Faltan</h2>
-
-<div id="countdown"></div>
-
-<p>para el gran día</p>
-
-</section>
-
-
-<section class="paper">
-
-<div class="icon">💒</div>
-
-<h2>Ceremonia</h2>
-
-<div class="day">Viernes</div>
-
-<div class="number">15</div>
-
-<div>Enero</div>
-
-<div class="hour">18:30 PM</div>
-
-<div>2027</div>
-
-<p>Catedral de Morón</p>
-
-<a class="btn"
-href="https://maps.google.com/?q=Catedral+de+Moron">
-¿Cómo llegar?
-</a>
-
-</section>
-
-
-<section class="paper">
-
-<div class="icon">🎉</div>
-
-<h2>Celebración</h2>
-
-<div class="number">15</div>
-
-<div class="hour">21:30 PM</div>
-
-<p>Salón Janos Acceso Oeste</p>
-
-<a class="btn"
-href="https://maps.google.com/?q=Janos+Acceso+Oeste">
-¿Cómo llegar?
-</a>
-
-</section>
-
-
-<section class="paper">
-
-<h2>Retratos de nuestro amor</h2>
-
-<div class="slider">
-
-<img src="fotos1.jpg">
-<img src="fotos2.jpg">
-<img src="fotos3.jpg">
+<p class="fecha">15 Enero 2027</p>
 
 </div>
 
 </section>
 
-
-<section class="paper">
-
-<h2>Música</h2>
-
-<p>¿Qué canción no puede faltar?</p>
-
-<input id="song" placeholder="Escribe la canción">
-
-<button onclick="sendSong()">Enviar</button>
-
-</section>
-
-
-<section class="paper">
-
-<h2>Dress Code</h2>
-
-<p>Tonos verde azulado</p>
-
-<img src="img.colores.png" class="palette">
-
-</section>
-
-
-<section class="paper">
-
-<h2>Regalos</h2>
-
-<p>
-Tu presencia es nuestro mejor regalo,
-pero si deseas hacernos un obsequio…
-</p>
-
-<button onclick="showGift()">Ver más</button>
-
-<div id="gift" class="hidden">
-
-<p><b>Alias:</b> Angel&Aldi</p>
-<p><b>CBU:</b> 0000222542331251</p>
-
-</div>
-
-</section>
-
-
-<section class="paper">
-
-<h2>Confirmar asistencia</h2>
-
-<input id="name" placeholder="Nombre">
-
-<input id="guests" placeholder="Acompañantes">
-
-<textarea id="extra"
-placeholder="Alergias, vegetariano, etc"></textarea>
-
-<button onclick="confirm()">Confirmo</button>
-
-<button onclick="decline()">No puedo</button>
-
-<h3>Los esperamos</h3>
-
-</section>
-
-</div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
+
 
