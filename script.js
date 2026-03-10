@@ -1,11 +1,11 @@
 function openEnvelope(){
-
-document.getElementById("intro").style.display="none"
-
-document.getElementById("invitation").classList.remove("hidden")
-
+  const envelope = document.querySelector(".envelope-large");
+  envelope.classList.add("opening"); // animación
+  setTimeout(() => {
+    document.getElementById("intro").style.display="none";
+    document.getElementById("invitation").classList.remove("hidden");
+  }, 1000); // espera 1s mientras se abre el sobre
 }
-
 const weddingDate = new Date("2027-01-15")
 
 function updateCountdown(){
@@ -69,3 +69,4 @@ window.open(
 )
 
 }
+
