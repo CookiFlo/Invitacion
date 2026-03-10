@@ -5,7 +5,7 @@ font-family:'Montserrat',sans-serif;
 
 }
 
-/* FONDO FOTO */
+/* PANTALLA INICIAL */
 
 #intro{
 
@@ -21,23 +21,23 @@ align-items:center;
 
 }
 
-/* capa verde azulado */
+/* filtro verde azulado */
 
 .overlay{
 
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(20,70,70,0.55);
+
+background:rgba(25,85,80,0.6);
 
 }
 
-/* contenedor */
+/* contenedor sobre */
 
 .envelope-container{
 
 position:relative;
-text-align:center;
 z-index:2;
 
 }
@@ -46,77 +46,43 @@ z-index:2;
 
 .envelope{
 
-width:280px;
-height:180px;
+width:320px;
 
-background:#e9dfcf;
+filter:drop-shadow(0 20px 30px rgba(0,0,0,0.4));
 
-position:relative;
+}
+
+/* SELLO CORAZON */
+
+.seal{
+
+position:absolute;
+
+top:55%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:40px;
+
+color:#b30000;
 
 cursor:pointer;
 
-border-radius:4px;
-
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-
-transition:transform 0.3s;
+animation:latido 1.2s infinite;
 
 }
 
-.envelope:hover{
+/* animacion latido */
 
-transform:scale(1.05);
+@keyframes latido{
 
-}
-
-/* tapa del sobre */
-
-.flap{
-
-position:absolute;
-
-top:-90px;
-
-width:0;
-height:0;
-
-border-left:140px solid transparent;
-border-right:140px solid transparent;
-border-bottom:90px solid #d9cdb8;
+0%{transform:translate(-50%,-50%) scale(1)}
+50%{transform:translate(-50%,-50%) scale(1.2)}
+100%{transform:translate(-50%,-50%) scale(1)}
 
 }
 
-/* hoja interior */
-
-.letter{
-
-position:absolute;
-
-width:90%;
-height:80%;
-
-background:#f3ebdf;
-
-top:10%;
-left:5%;
-
-border-radius:4px;
-
-}
-
-/* texto tocar */
-
-.touch{
-
-margin-top:25px;
-
-color:white;
-
-font-size:18px;
-
-letter-spacing:2px;
-
-}
 
 /* HOJA */
 
@@ -127,7 +93,6 @@ height:100vh;
 background:#f2eadf;
 
 display:flex;
-
 justify-content:center;
 align-items:center;
 
@@ -135,27 +100,33 @@ text-align:center;
 
 }
 
+/* tarjeta */
+
 .paper{
 
 background:#f5efe6;
 
 padding:60px;
 
-border-radius:10px;
+border-radius:8px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
 
 }
 
+/* nombres */
+
 h1{
 
-font-family:'Playfair Display',serif;
+font-family:'Great Vibes',cursive;
 
-font-size:40px;
+font-size:46px;
 
 color:#2c5c5c;
 
 }
+
+/* subtitulo */
 
 h2{
 
@@ -165,6 +136,8 @@ font-weight:400;
 
 }
 
+/* fecha */
+
 .fecha{
 
 font-size:22px;
@@ -172,6 +145,8 @@ font-size:22px;
 margin-top:20px;
 
 }
+
+/* oculto */
 
 .hidden{
 
