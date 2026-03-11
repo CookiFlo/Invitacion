@@ -33,21 +33,33 @@ filter:drop-shadow(0 20px 30px rgba(0,0,0,0.4));
 
 /* SELLO CORAZON */
 
+.envelope-container{
+position:relative;
+}
+
 .seal{
 
 position:absolute;
 
-top:55%;
+top:50%;
 left:50%;
 
 transform:translate(-50%,-50%);
-  
-width:20px;
-height:auto;
 
 cursor:pointer;
 
 animation:latido 1.2s infinite;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.seal-img{
+
+width:45px;
+height:auto;
 
 }
 
@@ -131,6 +143,7 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
 
