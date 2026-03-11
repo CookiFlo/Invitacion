@@ -11,7 +11,7 @@ font-family:'Montserrat',sans-serif;
 
 height:100vh;
 
-background-image:url("fondoflorcitas.jpg");
+background-image:url("fondofloreado.jpg");
 background-size:cover;
 background-position:center;
 
@@ -42,7 +42,8 @@ left:50%;
 
 transform:translate(-50%,-50%);
   
-font-size:5px;
+width:60px;
+height:auto;
 
 cursor:pointer;
 
@@ -130,6 +131,7 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
 
