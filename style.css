@@ -25,7 +25,7 @@ align-items:center;
 
 .envelope{
 
-width:320px;
+width:450px;
 
 filter:drop-shadow(0 20px 30px rgba(0,0,0,0.4));
 
@@ -44,7 +44,7 @@ transform:translate(-50%,-50%);
 
 font-size:20px;
 
-color:blanco
+color:beige
 
 cursor:pointer;
 
@@ -132,6 +132,7 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
 
