@@ -26,7 +26,7 @@ align-items:center;
 .envelope-container{
 
 position:relative;
-z-index:2;
+z-index:3;
 
 }
 
@@ -51,7 +51,7 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-font-size:40px;
+font-size:20px;
 
 color:white
 
@@ -141,6 +141,7 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
 
