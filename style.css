@@ -25,7 +25,7 @@ align-items:center;
 
 .envelope{
 
-width:500px;
+width:350px;
 
 filter:drop-shadow(0 20px 30px rgba(0,0,0,0.4));
 
@@ -132,6 +132,7 @@ margin-top:20px;
 display:none;
 
 }
+
 
 
 
