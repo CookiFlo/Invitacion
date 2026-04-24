@@ -144,7 +144,73 @@ display:none;
 
 }
 
+/* pantalla completa tipo historia */
 
+.pantalla1{
+
+height:100vh;
+width:100%;
+
+position:relative;
+overflow:hidden;
+
+}
+
+/* imagen full */
+
+.imagen-full{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+/* flecha */
+
+.flecha{
+
+position:absolute;
+
+bottom:20px;
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:28px;
+
+color:white;
+
+animation:subir 2s infinite;
+
+opacity:0.8;
+
+}
+
+/* animacion flecha */
+
+@keyframes subir{
+
+0%{transform:translate(-50%,0)}
+50%{transform:translate(-50%,-10px)}
+100%{transform:translate(-50%,0)}
+
+}
+
+
+/* siguiente hoja */
+
+#hoja2{
+
+height:100vh;
+
+background:#f2eadf;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
 
 
 
