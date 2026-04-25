@@ -1,6 +1,8 @@
 body{
 margin:0;
-font-family:'Montserrat',sans-serif;
+font-family: 'Montserrat', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 overflow:hidden;
 }
 
@@ -122,11 +124,10 @@ align-items:center;
 }
 
 .titulo-contador{
-font-family:'Playfair Display', 'Georgia', 'Times New Roman', serif;
+font-family: 'Playfair Display', serif;
+font-weight:600;
+letter-spacing:2px;
 color:#a1866f;
-font-size:60px;
-letter-spacing:3px;
-margin-bottom:30px;
 }
 
 .contador{
@@ -172,7 +173,7 @@ overflow:hidden;
 /* fondo en PC */
 
 body{
-background:#2c5c5c;
+background:linear-gradient(180deg, #e8e2d8, #d9d2c5);
 }
 
 /* SOLO en pantallas grandes */
