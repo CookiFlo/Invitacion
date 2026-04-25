@@ -71,10 +71,10 @@ object-fit:cover;
 
 .flecha{
 position:absolute;
-bottom:20px;
+bottom:25px;
 left:50%;
 transform:translateX(-50%);
-font-size:28px;
+font-size:42px;
 color:#a1866f;
 animation:subir 2s infinite;
 cursor:pointer;
@@ -122,7 +122,7 @@ align-items:center;
 }
 
 .titulo-contador{
-font-family:'Playfair Display', serif;
+font-family:'Playfair Display', 'Georgia', 'Times New Roman', serif;
 color:#a1866f;
 font-size:60px;
 letter-spacing:3px;
