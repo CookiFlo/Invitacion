@@ -73,13 +73,14 @@ object-fit:cover;
 
 .flecha{
 position:absolute;
-bottom:10%;
+bottom:8vh;
 left:50%;
 transform:translateX(-50%);
 font-size:55px;
 color:#a1866f;
 animation:subir 1.2s infinite;
 cursor:pointer;
+z-index:10;
 }
 
 @keyframes subir{
@@ -110,7 +111,7 @@ object-fit:cover;
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(245,239,230,0.6);
+background:rgba(245,239,230,0.3);
 }
 
 .contenido-contador{
@@ -163,56 +164,21 @@ scroll-behavior:smooth;
 }
 
 /* =========================
-   BASE
-========================= */
-
-body{
-margin:0;
-font-family:'Montserrat',sans-serif;
-overflow:hidden;
-background:#e8e2d8;
-}
-
-/* contenedor tipo celular */
-
-.app{
-max-width:420px;
-margin:auto;
-background:white;
-min-height:100vh;
-overflow:hidden;
-}
-
-/* =========================
-   FLECHA (ARREGLADA)
-========================= */
-
-.flecha{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:8%;
-font-size:42px;
-color:white;
-animation:subir 1.5s infinite;
-cursor:pointer;
-z-index:20;
-text-shadow:0 0 10px rgba(0,0,0,0.5);
-}
-
-/* =========================
    TABLET Y PC
 ========================= */
 
 @media (min-width: 768px){
 
-/* fondo sin deformar */
 body{
+background:#e8e2d8; /* dejamos limpio */
+}
+
+/* fondo aplicado SOLO al contador */
+.contador-section{
 background-image:url("img/contador.jpg");
-background-size:contain; /* CLAVE */
-background-repeat:no-repeat;
+background-size:cover;
 background-position:center;
-background-color:#e8e2d8;
+background-repeat:no-repeat;
 }
 
 /* SACAMOS blur/transparencia que rompe colores */
@@ -225,12 +191,3 @@ box-shadow:0 20px 60px rgba(0,0,0,0.2);
 
 }
 
-/* =========================
-   ANIMACION FLECHA
-========================= */
-
-@keyframes subir{
-0%{transform:translate(-50%,0)}
-50%{transform:translate(-50%,-10px)}
-100%{transform:translate(-50%,0)}
-}
