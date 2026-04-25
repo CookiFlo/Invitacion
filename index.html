@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,56 +10,49 @@
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<!-- INTRO CON SOBRE -->
+<!-- INTRO -->
 
 <section id="intro">
 
-<div class="overlay"></div>
-
 <div class="envelope-container">
 
-<img src="img.sobresinfondo.png" class="envelope">
+<img src="img/sobresinfondo.png" class="envelope">
 
 <div class="seal" onclick="abrirSobre()">
-<img src="img.sobreicono.png" class="seal-img">
+<img src="img/sobreicono.png" class="seal-img">
 </div>
 
+</div>
 
 </section>
+
+
+<!-- HOJA 1 -->
 
 <section id="hoja1" class="hidden">
 
 <div class="pantalla1">
 
-<img src="img.portada.jpg" class="imagen-full">
+<img src="img/portada.jpg" class="imagen-full">
 
-<div class="flecha">⌃</div>
+<div class="flecha" onclick="bajar()">⌄</div>
 
 </div>
 
 </section>
 
-<div class="flecha" onclick="bajar()">
-⌄
-</div>
 
-<!-- SIGUIENTE HOJA (vacía por ahora) -->
+<!-- HOJA 2 (CONTADOR) -->
+
 <section id="hoja2" class="hidden">
-
-<h2>Próxima sección</h2>
-
-</section>
-
-  <section id="hoja2" class="hidden">
 
 <div class="contador-section">
 
-<img src="img.contador.jpg" class="fondo-contador">
+<img src="img/contador.jpg" class="fondo-contador">
 
 <div class="overlay-contador"></div>
 
@@ -98,7 +90,10 @@
 
 </section>
 
+<script src="script.js"></script>
 
+</body>
+</html>
 
 
 
