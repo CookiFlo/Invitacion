@@ -76,7 +76,7 @@ left:50%;
 transform:translateX(-50%);
 font-size:42px;
 color:#a1866f;
-animation:subir 2s infinite;
+animation:subir 3s infinite;
 cursor:pointer;
 }
 
