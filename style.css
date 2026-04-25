@@ -175,7 +175,7 @@ background:#e8e2d8; /* dejamos limpio */
 
 /* fondo aplicado SOLO al contador */
 .contador-section{
-background-image:url("img/contador.jpg");
+background-image:url("img.contador.jpg");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
