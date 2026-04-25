@@ -73,7 +73,7 @@ object-fit:cover;
 
 .flecha{
 position:absolute;
-bottom:5px;
+bottom:60px;
 left:50%;
 transform:translateX(-50%);
 font-size:55px;
