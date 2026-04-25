@@ -71,10 +71,10 @@ object-fit:cover;
 
 .flecha{
 position:absolute;
-bottom:25px;
+bottom:30px;
 left:50%;
 transform:translateX(-50%);
-font-size:42px;
+font-size:55px;
 color:#a1866f;
 animation:subir 1.2s infinite;
 cursor:pointer;
