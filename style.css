@@ -159,7 +159,35 @@ html{
 scroll-behavior:smooth;
 }
 
+/* MODO DESKTOP */
 
+.app{
+max-width:420px;
+margin:auto;
+background:white;
+min-height:100vh;
+overflow:hidden;
+}
+
+/* fondo en PC */
+
+body{
+background:#2c5c5c;
+}
+
+/* SOLO en pantallas grandes */
+
+@media (max-width: 768px){
+
+.app{
+max-width:100%;
+}
+
+body{
+background:white;
+}
+
+}
 
 
 
