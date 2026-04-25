@@ -75,7 +75,7 @@ bottom:20px;
 left:50%;
 transform:translateX(-50%);
 font-size:28px;
-color:white;
+color:#a1866f;
 animation:subir 2s infinite;
 cursor:pointer;
 }
@@ -124,7 +124,7 @@ align-items:center;
 .titulo-contador{
 font-family:'Playfair Display', serif;
 color:#a1866f;
-font-size:30px;
+font-size:60px;
 letter-spacing:3px;
 margin-bottom:30px;
 }
@@ -145,7 +145,7 @@ color:#2c5c5c;
 }
 
 .bloque p{
-font-size:14px;
+font-size:20px;
 color:#a1866f;
 }
 
