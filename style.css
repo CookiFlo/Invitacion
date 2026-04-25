@@ -163,8 +163,17 @@ scroll-behavior:smooth;
 }
 
 /* =========================
-   MODO DESKTOP PROLIJO
+   BASE
 ========================= */
+
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+overflow:hidden;
+background:#e8e2d8;
+}
+
+/* contenedor tipo celular */
 
 .app{
 max-width:420px;
@@ -174,51 +183,54 @@ min-height:100vh;
 overflow:hidden;
 }
 
-/* fondo base (celular) */
-body{
-margin:0;
-font-family:'Montserrat',sans-serif;
-overflow:hidden;
-background:#e8e2d8;
+/* =========================
+   FLECHA (ARREGLADA)
+========================= */
+
+.flecha{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:8%;
+font-size:42px;
+color:white;
+animation:subir 1.5s infinite;
+cursor:pointer;
+z-index:20;
+text-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
-/* SOLO PC */
+/* =========================
+   TABLET Y PC
+========================= */
+
 @media (min-width: 768px){
 
+/* fondo sin deformar */
 body{
-background-image:url("img.contador.jpg");
-background-size:cover;
-background-position:center;
+background-image:url("img/contador.jpg");
+background-size:contain; /* CLAVE */
 background-repeat:no-repeat;
-animation:fondoMovimiento 25s ease-in-out infinite;
+background-position:center;
+background-color:#e8e2d8;
 }
 
-/* clave: transparencia MÁS SUAVE */
+/* SACAMOS blur/transparencia que rompe colores */
 .app{
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(6px);
+background:white;
 border-radius:20px;
 margin:20px auto;
-box-shadow:0 20px 60px rgba(0,0,0,0.3);
+box-shadow:0 20px 60px rgba(0,0,0,0.2);
 }
 
 }
 
-/* animación suave */
-@keyframes fondoMovimiento{
-0%{background-position:center;}
-50%{background-position:center 15px;}
-100%{background-position:center;}
+/* =========================
+   ANIMACION FLECHA
+========================= */
+
+@keyframes subir{
+0%{transform:translate(-50%,0)}
+50%{transform:translate(-50%,-10px)}
+100%{transform:translate(-50%,0)}
 }
-
-
-
-
-
-
-
-
-
-
-
-
