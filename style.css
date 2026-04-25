@@ -126,7 +126,9 @@ align-items:center;
 .titulo-contador{
 font-family: 'Playfair Display', serif;
 font-weight:600;
+font-size:55px; /* MÁS GRANDE */
 letter-spacing:2px;
+margin-bottom:20px;
 color:#a1866f;
 }
 
@@ -173,19 +175,22 @@ overflow:hidden;
 /* fondo en PC */
 
 body{
-background:linear-gradient(180deg, #e8e2d8, #d9d2c5);
+background:#e8e2d8;
 }
 
 /* SOLO en pantallas grandes */
-
-@media (max-width: 768px){
-
-.app{
-max-width:100%;
-}
+@media (min-width: 768px){
 
 body{
-background:white;
+background-image:url("img/contador.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.app{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(8px);
 }
 
 }
