@@ -73,7 +73,7 @@ object-fit:cover;
 
 .flecha{
 position:absolute;
-bottom:60px;
+bottom:10%;
 left:50%;
 transform:translateX(-50%);
 font-size:55px;
@@ -162,7 +162,9 @@ html{
 scroll-behavior:smooth;
 }
 
-/* MODO DESKTOP */
+/* =========================
+   MODO DESKTOP PROLIJO
+========================= */
 
 .app{
 max-width:420px;
@@ -172,40 +174,41 @@ min-height:100vh;
 overflow:hidden;
 }
 
-/* fondo en PC */
-
+/* fondo base (celular) */
 body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+overflow:hidden;
 background:#e8e2d8;
 }
 
-/* SOLO en pantallas grandes */
+/* SOLO PC */
 @media (min-width: 768px){
 
 body{
 background-image:url("img/contador.jpg");
 background-size:cover;
-background-repeat:no-repeat;
 background-position:center;
-animation:fondoMovimiento 20s ease-in-out infinite;
+background-repeat:no-repeat;
+animation:fondoMovimiento 25s ease-in-out infinite;
 }
 
+/* clave: transparencia MÁS SUAVE */
 .app{
-background:rgba(255,255,255,0.6);
-backdrop-filter:blur(8px);
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(6px);
+border-radius:20px;
+margin:20px auto;
+box-shadow:0 20px 60px rgba(0,0,0,0.3);
 }
 
 }
 
+/* animación suave */
 @keyframes fondoMovimiento{
-0%{
-background-position: center;
-}
-50%{
-background-position: center 20px;
-}
-100%{
-background-position: center;
-}
+0%{background-position:center;}
+50%{background-position:center 15px;}
+100%{background-position:center;}
 }
 
 
