@@ -4,7 +4,7 @@ const intro = document.getElementById("intro")
 const hoja1 = document.getElementById("hoja1")
 const hoja2 = document.getElementById("hoja2")
 
-// fade out del sobre
+// animación (zoom + fade)
 intro.classList.add("ocultar")
 
 setTimeout(()=>{
@@ -14,7 +14,7 @@ intro.style.display="none"
 hoja1.classList.remove("hidden")
 hoja2.classList.remove("hidden")
 
-// activar animación entrada
+// entrada elegante
 setTimeout(()=>{
 hoja1.classList.add("mostrar")
 },50)
@@ -24,7 +24,7 @@ document.body.style.overflow = "auto"
 
 window.scrollTo(0,0)
 
-},800)
+},400)
 
 }
 
