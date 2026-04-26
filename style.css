@@ -220,14 +220,15 @@ animation:fondoMove 30s ease-in-out infinite;
 100%{transform:scale(1);}
 }
 
-/* TRANSICIONES ELEGANTES */
+/* INTRO con zoom */
 
 #intro{
-transition:opacity 0.4s ease;
+transition:opacity 0.4s ease, transform 0.4s ease;
 }
 
 #intro.ocultar{
 opacity:0;
+transform:scale(0.9);
 }
 
 /* hoja aparece suave */
