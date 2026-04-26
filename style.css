@@ -290,3 +290,8 @@ animation:fondoMove 30s ease-in-out infinite;
 50%{transform:scale(1.05);}
 100%{transform:scale(1);}
 }
+
+#hoja3{
+touch-action:pan-y;
+overflow:hidden;
+}
