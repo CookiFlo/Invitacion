@@ -242,3 +242,13 @@ transition:all 0.5s ease;
 opacity:1;
 transform:translateY(0);
 }
+/* INTRO con zoom */
+
+#intro{
+transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+#intro.ocultar{
+opacity:0;
+transform:scale(0.9);
+}
