@@ -1,15 +1,30 @@
 function abrirSobre(){
 
-document.getElementById("intro").style.display="none"
+const intro = document.getElementById("intro")
+const hoja1 = document.getElementById("hoja1")
+const hoja2 = document.getElementById("hoja2")
 
-document.getElementById("hoja1").classList.remove("hidden")
+// fade out del sobre
+intro.classList.add("ocultar")
 
-document.getElementById("hoja2").classList.remove("hidden")
+setTimeout(()=>{
+
+intro.style.display="none"
+
+hoja1.classList.remove("hidden")
+hoja2.classList.remove("hidden")
+
+// activar animación entrada
+setTimeout(()=>{
+hoja1.classList.add("mostrar")
+},50)
 
 // activar scroll
 document.body.style.overflow = "auto"
 
 window.scrollTo(0,0)
+
+},800)
 
 }
 
