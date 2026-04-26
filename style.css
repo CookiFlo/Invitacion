@@ -253,3 +253,36 @@ transition:opacity 0.3s ease, transform 0.3s ease;
 opacity:0;
 transform:scale(0.9);
 }
+
+/* HOJA 3 y 4 */
+
+#hoja3, #hoja4{
+height:100vh;
+}
+
+.pantalla3, .pantalla4{
+position:relative;
+height:100%;
+}
+
+/* BOTON MAPS */
+
+.btn-maps{
+position:absolute;
+bottom:25%;
+left:50%;
+transform:translateX(-50%);
+background:#2c5c5c;
+color:white;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:all 0.3s ease;
+}
+
+.btn-maps:hover{
+transform:translateX(-50%) scale(1.05);
+background:#3d7a7a;
+}
