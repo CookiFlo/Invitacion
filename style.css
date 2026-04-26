@@ -223,7 +223,7 @@ animation:fondoMove 30s ease-in-out infinite;
 /* TRANSICIONES ELEGANTES */
 
 #intro{
-transition:opacity 0.2s ease;
+transition:opacity 1s ease;
 }
 
 #intro.ocultar{
