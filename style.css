@@ -27,6 +27,14 @@ background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
+
+/* transición con zoom */
+transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+#intro.ocultar{
+opacity:0;
+transform:scale(0.9);
 }
 
 /* SOBRE */
@@ -67,6 +75,16 @@ width:200px;
 
 #hoja1{
 height:100vh;
+
+/* entrada suave */
+opacity:0;
+transform:translateY(30px);
+transition:all 0.4s ease;
+}
+
+#hoja1.mostrar{
+opacity:1;
+transform:translateY(0);
 }
 
 .pantalla1{
@@ -80,7 +98,7 @@ height:100%;
 object-fit:cover;
 }
 
-/* FLECHA (solo le agregamos sombra) */
+/* FLECHA */
 
 .flecha{
 position:absolute;
@@ -92,12 +110,8 @@ color:white;
 animation:subir 1.2s infinite;
 cursor:pointer;
 z-index:10;
-
-/* NUEVO */
 text-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
-
-/* animación */
 
 @keyframes subir{
 0%{transform:translate(-50%,0)}
@@ -168,92 +182,6 @@ font-size:24px;
 color:#a1866f;
 }
 
-/* oculto */
-
-.hidden{
-display:none;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-/* =========================
-   SOLO TABLET Y PC
-========================= */
-
-@media (min-width: 768px){
-
-body{
-background:#e8e2d8;
-}
-
-/* centrado tipo celular */
-.app{
-margin:40px auto;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.25);
-}
-
-/* fondo elegante con movimiento */
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:url("img.contador.jpg");
-background-size:cover;
-background-position:center;
-z-index:-1;
-animation:fondoMove 30s ease-in-out infinite;
-}
-
-}
-
-/* movimiento real (ahora sí se ve) */
-
-@keyframes fondoMove{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
-}
-
-/* INTRO con zoom */
-
-#intro{
-transition:opacity 0.4s ease, transform 0.4s ease;
-}
-
-#intro.ocultar{
-opacity:0;
-transform:scale(0.9);
-}
-
-/* hoja aparece suave */
-
-#hoja1{
-opacity:0;
-transform:translateY(30px);
-transition:all 0.4s ease;
-}
-
-#hoja1.mostrar{
-opacity:1;
-transform:translateY(0);
-}
-/* INTRO con zoom */
-
-#intro{
-transition:opacity 0.3s ease, transform 0.3s ease;
-}
-
-#intro.ocultar{
-opacity:0;
-transform:scale(0.9);
-}
-
 /* HOJA 3 y 4 */
 
 #hoja3, #hoja4{
@@ -280,9 +208,85 @@ text-decoration:none;
 font-size:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 transition:all 0.3s ease;
+z-index:20;
 }
 
 .btn-maps:hover{
 transform:translateX(-50%) scale(1.05);
 background:#3d7a7a;
+}
+
+.btn-maps:active{
+transform:translateX(-50%) scale(0.95);
+}
+
+/* oculto */
+
+.hidden{
+display:none;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* =========================
+   AJUSTES FINOS
+========================= */
+
+/* flechas mejor posicionadas en hojas largas */
+
+#hoja2 .flecha,
+#hoja3 .flecha{
+bottom:6vh;
+}
+
+/* swipe más natural */
+
+#hoja3{
+touch-action:pan-y;
+}
+
+/* =========================
+   SOLO TABLET Y PC
+========================= */
+
+@media (min-width: 768px){
+
+body{
+background:#e8e2d8;
+}
+
+/* centrado tipo celular */
+
+.app{
+margin:40px auto;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* fondo con movimiento real */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:url("img.contador.jpg");
+background-size:cover;
+background-position:center;
+z-index:-1;
+animation:fondoMove 30s ease-in-out infinite;
+}
+
+}
+
+/* animación fondo */
+
+@keyframes fondoMove{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
 }
