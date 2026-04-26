@@ -24,7 +24,7 @@ document.body.style.overflow = "auto"
 
 window.scrollTo(0,0)
 
-},400)
+},300)
 
 }
 
