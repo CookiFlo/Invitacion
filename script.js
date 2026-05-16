@@ -22,7 +22,6 @@ hoja1.classList.add("mostrar")
 document.body.style.overflow="auto"
 
 },300)
-
 }
 
 function bajar(){
@@ -45,17 +44,16 @@ const ahora = new Date()
 const diferencia = fechaBoda - ahora
 
 document.getElementById("dias").innerHTML =
-Math.floor(diferencia / (1000*60*60*24))
+Math.floor(diferencia/(1000*60*60*24))
 
 document.getElementById("horas").innerHTML =
-Math.floor((diferencia / (1000*60*60)) % 24)
+Math.floor((diferencia/(1000*60*60))%24)
 
 document.getElementById("minutos").innerHTML =
-Math.floor((diferencia / (1000*60)) % 60)
+Math.floor((diferencia/(1000*60))%60)
 
 document.getElementById("segundos").innerHTML =
-Math.floor((diferencia / 1000) % 60)
-
+Math.floor((diferencia/1000)%60)
 }
 
 actualizarContador()
