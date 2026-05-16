@@ -61,14 +61,12 @@ width:200px;
 }
 
 @keyframes latido{
-0%{transform:translate(-50%,-50%) scale(1)}
-50%{transform:translate(-50%,-50%) scale(1.15)}
-100%{transform:translate(-50%,-50%) scale(1)}
+50%{transform:translate(-50%,-50%) scale(1.15);}
 }
 
 /* HOJAS */
 
-#hoja1,#hoja2,#hoja3,#hoja4{
+#hoja1,#hoja2,#hoja3{
 height:100vh;
 position:relative;
 }
@@ -90,22 +88,44 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* FLECHAS */
+/* FLECHAS VERTICALES */
 
 .flecha{
 position:absolute;
 bottom:8vh;
 left:50%;
 transform:translateX(-50%);
-font-size:55px;
-color:white;
+font-size:48px;
+font-weight:bold;
+color:#2c5c5c;
 cursor:pointer;
 animation:subir 1.2s infinite;
-text-shadow:0 4px 10px rgba(0,0,0,.4);
+z-index:20;
+text-shadow:0 4px 10px rgba(255,255,255,.7);
 }
 
 @keyframes subir{
 50%{transform:translate(-50%,-10px);}
+}
+
+/* FLECHA LATERAL */
+
+.flecha-lateral{
+position:absolute;
+right:20px;
+top:50%;
+transform:translateY(-50%);
+font-size:70px;
+font-weight:bold;
+color:#2c5c5c;
+cursor:pointer;
+z-index:30;
+text-shadow:0 4px 10px rgba(255,255,255,.7);
+animation:lateral 1.2s infinite;
+}
+
+@keyframes lateral{
+50%{transform:translateY(-50%) translateX(10px);}
 }
 
 /* CONTADOR */
@@ -159,35 +179,17 @@ border-radius:30px;
 text-decoration:none;
 }
 
-/* FLECHA LATERAL */
-
-.flecha-lateral{
-position:absolute;
-right:20px;
-top:50%;
-transform:translateY(-50%);
-font-size:80px;
-font-weight:bold;
-color:#2c5c5c;
-cursor:pointer;
-z-index:30;
-text-shadow:0 4px 10px rgba(255,255,255,.7);
-animation:lateral 1.3s infinite;
-}
-
-@keyframes lateral{
-50%{transform:translateY(-50%) translateX(12px);}
-}
-
-/* HOJA 4 SLIDE */
+/* HOJA 4 SLIDE REAL */
 
 #hoja4{
 position:fixed;
 top:0;
-left:100%;
+left:100vw;
 width:100%;
-transition:.6s ease;
+height:100vh;
+transition:left .65s ease;
 z-index:100;
+background:white;
 }
 
 #hoja4.mostrar4{
