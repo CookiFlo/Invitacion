@@ -1,18 +1,21 @@
 function abrirSobre(){
 
 const intro=document.getElementById("intro")
-const hojas=document.querySelectorAll("section")
+const hojas=["hoja1","hoja2","hoja3","hoja4","hoja5","hoja6"]
 
 intro.classList.add("ocultar")
 
 setTimeout(()=>{
+
 intro.style.display="none"
 
-hojas.forEach(h=>{
-if(h.id!=="intro"){
-h.classList.remove("hidden")
-}
+hojas.forEach(id=>{
+document.getElementById(id).classList.remove("hidden")
 })
+
+setTimeout(()=>{
+document.getElementById("hoja1").classList.add("mostrar")
+},50)
 
 document.body.style.overflow="auto"
 window.scrollTo(0,0)
@@ -28,28 +31,17 @@ function bajarA3(){
 document.getElementById("hoja3").scrollIntoView({behavior:"smooth"})
 }
 
-function irHoja4(){
-document.getElementById("hoja4").scrollIntoView({behavior:"smooth"})
+function irHoja(num){
+
+for(let i=4;i<=6;i++){
+document.getElementById("hoja"+i).classList.add("hidden-lateral")
 }
 
-function volverHoja3(){
+for(let i=4;i<=num;i++){
+document.getElementById("hoja"+i).classList.remove("hidden-lateral")
+}
+
 document.getElementById("hoja3").scrollIntoView({behavior:"smooth"})
-}
-
-function irHoja5(){
-document.getElementById("hoja5").scrollIntoView({behavior:"smooth"})
-}
-
-function volverHoja4(){
-document.getElementById("hoja4").scrollIntoView({behavior:"smooth"})
-}
-
-function irHoja6(){
-document.getElementById("hoja6").scrollIntoView({behavior:"smooth"})
-}
-
-function volverHoja5(){
-document.getElementById("hoja5").scrollIntoView({behavior:"smooth"})
 }
 
 const fechaBoda=new Date("2027-01-15T00:00:00")
