@@ -1,7 +1,6 @@
 function abrirSobre(){
 
-const intro=document.getElementById("intro")
-const hojas=document.querySelectorAll("section")
+const intro = document.getElementById("intro")
 
 intro.classList.add("ocultar")
 
@@ -9,92 +8,97 @@ setTimeout(()=>{
 
 intro.style.display="none"
 
-hojas.forEach(h=>{
-if(h.id!=="intro"){
-h.classList.remove("hidden")
-}
-})
+document.getElementById("hoja1").classList.remove("hidden")
+document.getElementById("hoja2").classList.remove("hidden")
+document.getElementById("hoja3").classList.remove("hidden")
+
+document.getElementById("hoja4").classList.add("hidden")
+document.getElementById("hoja5").classList.add("hidden")
+document.getElementById("hoja6").classList.add("hidden")
 
 document.body.style.overflow="auto"
 
-// 🔥 empezar en Hoja 1 fijo
-setTimeout(()=>{
-document.getElementById("hoja1").scrollIntoView({behavior:"auto"})
-},50)
+window.scrollTo(0,0)
 
 },300)
 }
 
-// 🔥 CORRECCIÓN IMPORTANTE: usar offsetTop
+
+/* SCROLL VERTICAL */
 
 function bajar(){
-window.scrollTo({
-top: document.getElementById("hoja2").offsetTop,
+document.getElementById("hoja2").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function bajarA3(){
-window.scrollTo({
-top: document.getElementById("hoja3").offsetTop,
+document.getElementById("hoja3").scrollIntoView({
 behavior:"smooth"
 })
 }
 
+
+/* NAVEGACION LATERAL */
+
 function irHoja4(){
-window.scrollTo({
-top: document.getElementById("hoja4").offsetTop,
+document.getElementById("hoja4").classList.remove("hidden")
+document.getElementById("hoja4").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function volverHoja3(){
-window.scrollTo({
-top: document.getElementById("hoja3").offsetTop,
+document.getElementById("hoja3").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function irHoja5(){
-window.scrollTo({
-top: document.getElementById("hoja5").offsetTop,
+document.getElementById("hoja5").classList.remove("hidden")
+document.getElementById("hoja5").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function volverHoja4(){
-window.scrollTo({
-top: document.getElementById("hoja4").offsetTop,
+document.getElementById("hoja4").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function irHoja6(){
-window.scrollTo({
-top: document.getElementById("hoja6").offsetTop,
+document.getElementById("hoja6").classList.remove("hidden")
+document.getElementById("hoja6").scrollIntoView({
 behavior:"smooth"
 })
 }
 
 function volverHoja5(){
-window.scrollTo({
-top: document.getElementById("hoja5").offsetTop,
+document.getElementById("hoja5").scrollIntoView({
 behavior:"smooth"
 })
 }
 
-// contador
-const fechaBoda=new Date("2027-01-15T00:00:00")
+
+/* CONTADOR */
+
+const fechaBoda = new Date("2027-01-15T00:00:00")
 
 function actualizarContador(){
 
-const ahora=new Date()
-const diferencia=fechaBoda-ahora
+const ahora = new Date()
+const diferencia = fechaBoda - ahora
 
-document.getElementById("dias").innerHTML=Math.max(0,Math.floor(diferencia/(1000*60*60*24)))
-document.getElementById("horas").innerHTML=Math.max(0,Math.floor((diferencia/(1000*60*60))%24))
-document.getElementById("minutos").innerHTML=Math.max(0,Math.floor((diferencia/(1000*60))%60))
-document.getElementById("segundos").innerHTML=Math.max(0,Math.floor((diferencia/1000)%60))
+const dias = Math.floor(diferencia / (1000*60*60*24))
+const horas = Math.floor((diferencia / (1000*60*60)) % 24)
+const minutos = Math.floor((diferencia / (1000*60)) % 60)
+const segundos = Math.floor((diferencia / 1000) % 60)
+
+document.getElementById("dias").innerHTML = dias
+document.getElementById("horas").innerHTML = horas
+document.getElementById("minutos").innerHTML = minutos
+document.getElementById("segundos").innerHTML = segundos
 }
 
 actualizarContador()
