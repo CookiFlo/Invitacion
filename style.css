@@ -15,7 +15,6 @@ overflow-x:hidden;
 }
 
 #intro{
-height:100vh;
 background-image:url("fondoflorcitas.jpg");
 background-size:cover;
 background-position:center;
@@ -54,8 +53,10 @@ animation:latido 1.2s infinite;
 100%{transform:translate(-50%,-50%) scale(1)}
 }
 
-#hoja1,#hoja2,#hoja3,#hoja4,#hoja5,#hoja6{
-height:100vh;
+#hoja1,#hoja2,#hoja3,#hoja4,#hoja5,#hoja6,
+#intro{
+height:100dvh;
+min-height:100vh;
 }
 
 .pantalla1,.pantalla3,.pantalla4,.contador-section{
