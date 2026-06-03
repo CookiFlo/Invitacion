@@ -211,3 +211,9 @@ animation:fondoMove 30s ease-in-out infinite;
 50%{transform:scale(1.05)}
 100%{transform:scale(1)}
 }
+/* SUBIR FLECHAS DE HOJA 1 Y HOJA 2 EN CELULARES */
+
+#hoja1 .flecha,
+#hoja2 .flecha{
+bottom:90px;
+}
