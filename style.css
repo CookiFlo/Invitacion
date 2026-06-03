@@ -59,23 +59,42 @@ height:100dvh;
 min-height:100vh;
 }
 
-.pantalla1,.pantalla3,.pantalla4,.contador-section{
+.pantalla1,
+.pantalla3,
+.pantalla4,
+.contador-section{
 position:relative;
 height:100%;
 }
 
-.imagen-full,.fondo-contador{
+.imagen-full{
 width:100%;
 height:100%;
 object-fit:cover;
+}
+
+.fondo-contador{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.contador-section{
+position:relative;
+height:100%;
+overflow:hidden;
 }
 
 .overlay-contador{
 position:absolute;
 width:100%;
 height:100%;
+top:0;
+left:0;
 }
-
 .contenido-contador{
 position:relative;
 z-index:2;
@@ -85,7 +104,6 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 }
-
 .titulo-contador{
 font-family:'Playfair Display',serif;
 font-size:55px;
