@@ -215,5 +215,10 @@ animation:fondoMove 30s ease-in-out infinite;
 
 #hoja1 .flecha,
 #hoja2 .flecha{
-bottom:120px;
+bottom:130px;
+color:white;
+text-shadow:
+0 0 10px rgba(0,0,0,.8),
+0 0 20px rgba(0,0,0,.6),
+0 4px 10px rgba(0,0,0,.8);
 }
