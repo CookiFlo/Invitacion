@@ -1,158 +1,72 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+function abrirSobre(){
 
-<title>Aldana & Angel</title>
+const intro=document.getElementById("intro")
+intro.classList.add("ocultar")
 
-<link rel="stylesheet" href="style.css">
+setTimeout(()=>{
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-</head>
+intro.style.display="none"
 
-<body>
+document.getElementById("hoja1").classList.remove("hidden")
+document.getElementById("hoja2").classList.remove("hidden")
+document.getElementById("hoja3").classList.remove("hidden")
 
-<!-- 🎵 MÚSICA AUTOMÁTICA -->
-<audio id="musica" autoplay loop muted>
-  <source src="musica.mp3" type="audio/mp3">
-</audio>
+window.scrollTo(0,0)
 
-<div class="app">
+},300)
 
-<!-- INTRO -->
-<section id="intro">
-  <div class="envelope-container">
-    <img src="img.sobresinfondo.png" class="envelope">
-    <div class="seal" onclick="abrirSobre()">
-      <img src="img.sobreicono.png" class="seal-img">
-    </div>
-  </div>
-</section>
+/* 🎵 AUTOPLAY INTELIGENTE */
+const audio=document.getElementById("musica")
 
-<!-- HOJA 1 -->
-<section id="hoja1" class="hidden">
-  <div class="pantalla1">
-    <img src="img.portada.jpg" class="imagen-full">
-    <div class="flecha" onclick="bajar()">⌄</div>
-  </div>
-</section>
+if(audio){
+audio.muted=false
+audio.play().catch(()=>{})
+}
+}
 
-<!-- HOJA 2 -->
-<section id="hoja2" class="hidden">
-  <div class="contador-section">
-    <img src="img.contador.jpg" class="fondo-contador">
-    <div class="overlay-contador"></div>
+/* SCROLL */
+function bajar(){
+document.getElementById("hoja2").scrollIntoView({behavior:"smooth"})
+}
 
-    <div class="contenido-contador">
-      <h2 class="titulo-contador">FALTAN</h2>
+function bajarA3(){
+document.getElementById("hoja3").scrollIntoView({behavior:"smooth"})
+}
 
-      <div class="contador">
-        <div class="bloque"><span id="dias">00</span><p>Días</p></div>
-        <div class="bloque"><span id="horas">00</span><p>Hr</p></div>
-        <div class="bloque"><span id="minutos">00</span><p>Min</p></div>
-        <div class="bloque"><span id="segundos">00</span><p>Seg</p></div>
-      </div>
-    </div>
+/* NAVEGACIÓN */
+function irHoja4(){document.getElementById("hoja4").classList.remove("hidden");document.getElementById("hoja4").scrollIntoView({behavior:"smooth"})}
+function volverHoja3(){document.getElementById("hoja3").scrollIntoView({behavior:"smooth"})}
 
-    <div class="flecha" onclick="bajarA3()">⌄</div>
-  </div>
-</section>
+function irHoja5(){document.getElementById("hoja5").classList.remove("hidden");document.getElementById("hoja5").scrollIntoView({behavior:"smooth"})}
+function volverHoja4(){document.getElementById("hoja4").scrollIntoView({behavior:"smooth"})}
 
-<!-- HOJA 3 -->
-<section id="hoja3" class="hidden">
-  <div class="pantalla3">
-    <img src="img.ceremonia.jpg" class="imagen-full">
+function irHoja6(){document.getElementById("hoja6").classList.remove("hidden");document.getElementById("hoja6").scrollIntoView({behavior:"smooth"})}
+function volverHoja5(){document.getElementById("hoja5").scrollIntoView({behavior:"smooth"})}
 
-    <a href="https://www.google.com/maps?q=Belgrano+327,+Morón,+Buenos+Aires"
-    target="_blank" class="btn-maps">Cómo llegar</a>
+function irHoja7(){document.getElementById("hoja7").classList.remove("hidden");document.getElementById("hoja7").scrollIntoView({behavior:"smooth"})}
+function volverHoja6(){document.getElementById("hoja6").scrollIntoView({behavior:"smooth"})}
 
-    <div class="flecha lateral derecha" onclick="irHoja4()">›</div>
-  </div>
-</section>
+function irHoja8(){document.getElementById("hoja8").classList.remove("hidden");document.getElementById("hoja8").scrollIntoView({behavior:"smooth"})}
+function volverHoja7(){document.getElementById("hoja7").scrollIntoView({behavior:"smooth"})}
 
-<!-- HOJA 4 -->
-<section id="hoja4" class="hidden">
-  <div class="pantalla4">
-    <img src="img.salon.jpg" class="imagen-full">
+function irHoja9(){document.getElementById("hoja9").classList.remove("hidden");document.getElementById("hoja9").scrollIntoView({behavior:"smooth"})}
+function volverHoja8(){document.getElementById("hoja8").scrollIntoView({behavior:"smooth"})}
 
-    <a href="https://www.google.com/maps?q=Au+Acceso+Oeste+31,+Paso+del+Rey,+Buenos+Aires"
-    target="_blank" class="btn-maps">Cómo llegar</a>
+function irHoja10(){document.getElementById("hoja10").classList.remove("hidden");document.getElementById("hoja10").scrollIntoView({behavior:"smooth"})}
+function volverHoja9(){document.getElementById("hoja9").scrollIntoView({behavior:"smooth"})}
 
-    <div class="flecha lateral izquierda" onclick="volverHoja3()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja5()">›</div>
-  </div>
-</section>
+/* CONTADOR */
+const fechaBoda=new Date("2027-01-15T00:00:00")
 
-<!-- HOJA 5 -->
-<section id="hoja5" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto1.jpg" class="imagen-full">
+function actualizarContador(){
+const ahora=new Date()
+const d=fechaBoda-ahora
 
-    <div class="flecha lateral izquierda" onclick="volverHoja4()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja6()">›</div>
-  </div>
-</section>
+document.getElementById("dias").innerText=Math.floor(d/86400000)
+document.getElementById("horas").innerText=Math.floor((d/3600000)%24)
+document.getElementById("minutos").innerText=Math.floor((d/60000)%60)
+document.getElementById("segundos").innerText=Math.floor((d/1000)%60)
+}
 
-<!-- HOJA 6 -->
-<section id="hoja6" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto2.jpg" class="imagen-full">
-
-    <div class="flecha lateral izquierda" onclick="volverHoja5()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja7()">›</div>
-  </div>
-</section>
-
-<!-- HOJA 7 -->
-<section id="hoja7" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto3.jpg" class="imagen-full">
-
-    <div class="flecha lateral izquierda" onclick="volverHoja6()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja8()">›</div>
-  </div>
-</section>
-
-<!-- HOJA 8 -->
-<section id="hoja8" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto4.jpg" class="imagen-full">
-
-    <div class="flecha lateral izquierda" onclick="volverHoja7()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja9()">›</div>
-  </div>
-</section>
-
-<!-- HOJA 9 -->
-<section id="hoja9" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto5.jpg" class="imagen-full">
-
-    <a href="https://invitados.janoseventos.com/?q=NTI3MjB8MTc4NjcxMjcxOQ.3-yVQD9W3qOyYyZZA4LGwlFIvejZozF3EM0dlL-VrOA"
-       target="_blank"
-       class="btn-maps"
-       style="bottom:35%;">
-       Confirmar asistencia
-    </a>
-
-    <div class="flecha lateral izquierda" onclick="volverHoja8()">‹</div>
-    <div class="flecha lateral derecha" onclick="irHoja10()">›</div>
-  </div>
-</section>
-
-<!-- HOJA 10 -->
-<section id="hoja10" class="hidden">
-  <div class="pantalla4">
-    <img src="img.foto6.jpg" class="imagen-full">
-
-    <div class="flecha lateral izquierda" onclick="volverHoja9()">‹</div>
-  </div>
-</section>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+setInterval(actualizarContador,1000)
+actualizarContador()
